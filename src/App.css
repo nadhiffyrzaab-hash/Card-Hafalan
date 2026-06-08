@@ -1,0 +1,203 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #212121;
+  color: #e0e0e0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.app-background {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background: linear-gradient(145deg, #272727, #1d1d1d);
+  padding: 32px 40px 40px;
+  border-radius: 24px;
+  box-shadow: 0 12px 35px rgba(0, 255, 0, 0.18);
+  border: 1px solid rgba(102, 187, 106, 0.25);
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 24px;
+}
+
+.card-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+  justify-content: flex-start;
+}
+
+.card-header .icon {
+  font-size: 2.8rem;
+  color: #66BB6A;
+}
+
+.card-header h1 {
+  color: #81C784;
+  font-size: 2rem;
+  margin: 0;
+  font-weight: 700;
+}
+
+.hafalan-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.hafalan-number {
+  font-size: 6.5rem;
+  font-weight: 800;
+  color: #A5D6A7;
+  margin: 0 0 18px 0;
+  text-shadow: 0 0 18px rgba(165, 214, 167, 0.45);
+}
+
+.progress-bar-container {
+  width: 100%;
+  max-width: 420px;
+  height: 16px;
+  background-color: #323232;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.35);
+  margin-bottom: 4px;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg, #66BB6A, #B2FF59);
+  border-radius: 12px;
+  transition: width 0.4s ease;
+}
+
+.message {
+  margin: 0;
+  color: #c8e6c9;
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+.buttons {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.button {
+  flex: 1 1 120px;
+  min-width: 110px;
+  padding: 14px 24px;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #212121;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+}
+
+.button.minus {
+  background-color: #ef5350;
+}
+
+.button.reset {
+  background-color: #ffca28;
+}
+
+.button.plus {
+  background-color: #66bb6a;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0, 255, 0, 0.25);
+}
+
+@media (max-width: 620px) {
+  .card {
+    padding: 32px;
+    gap: 24px;
+  }
+
+  .card-header {
+    gap: 12px;
+  }
+
+  .card-header .icon {
+    font-size: 2.4rem;
+  }
+
+  .card-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .hafalan-number {
+    font-size: 5.2rem;
+  }
+
+  .message {
+    font-size: 1.15rem;
+  }
+}
+
+@media (max-width: 440px) {
+  .card {
+    padding: 28px;
+    gap: 20px;
+  }
+
+  .card-header {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .card-header h1 {
+    font-size: 1.6rem;
+  }
+
+  .hafalan-number {
+    font-size: 4.5rem;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .button {
+    width: 100%;
+    min-width: unset;
+  }
+}
